@@ -5,24 +5,30 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+While there is a note that said "Press Enter to Apply", nothing happens when I do, so I have to manually used the "Submit answer" button. It seems to me that Going Lower/Going Higher is returned at random because I entered the same input several times in the same game and was told to go lower AND go higher. Out of range numbers were accepted no matter what mode I play in, and it looks like the range is flipped between Medium and Hard. 
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+The Enter button does not work, I have to submit answer manually. 
+Going Lower/Going Higher can both appear for the same number in the same game.
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input              | Expected Behavior             | Actual Behavior | Console Output / Error |
+|--------------------|-------------------------------|-----------------|------------------------|
+|55                  | go HIGHER                     | go LOWER        | app.py - check_guess|
+|Pressing Enter      | show "go HIGHER" or "go LOWER | Nothing happen  | app.py |
+|Pressing "New Game" | start a New Game              | Nothing happen  | app.py  |
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I'm using Claude for this project
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
 
