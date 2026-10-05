@@ -1,4 +1,7 @@
+#FIX: Refractored logic into logic_utils.py using agent mode
+
 def get_range_for_difficulty(difficulty: str):
+    #FIX: Changing the range for Normal to 50, and Hard to 100
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
         return 1, 20
@@ -28,6 +31,7 @@ def parse_guess(raw: str, low: int, high: int):
     except Exception:
         return False, None, "That is not a number."
 
+    #FIX: Ensure the guess is within the valid range before returning
     if value < low or value > high:
         return False, None, f"Enter a number between {low} and {high}."
 
@@ -57,6 +61,7 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
             points = 10
         return current_score + points
 
+    #FIX: Remove the calculation for the attempting being odd or even
     if outcome == "Too High":
         return current_score - 5
 
