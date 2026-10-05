@@ -62,10 +62,7 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         return current_score + points
 
     #FIX: Remove the calculation for the attempting being odd or even
-    if outcome == "Too High":
-        return current_score - 5
-
-    if outcome == "Too Low":
+    if outcome == "Too High" or outcome == "Too Low":
         return current_score - 5
 
     return current_score
